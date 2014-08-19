@@ -32,29 +32,41 @@ Based on the tutorialspoint's article, we already have make 3 files:
 
 * First of all, I'm sure you don't want to ruin your entire system while trying to do this. That's why we need a virtual environment. 
   To make a virtual environment, you need to have virtualenv installed. To install virtualenv, do this:
+
     ```
     sudo pip install virtualenv
     ```
+
 * You can make a new virtual environment by doing this (we are going to make a new virtual environment named `venv`):
+
     ```
     virtualenv venv
     ```
+
 * Activate your virtual environment by doing this:
+
     ```
     source venv/bin/activate
     ```
+
 * Once your virtual environment ready, you can try to compile install our `hello.c` as `helloworld` module in Python:
+
     ```
     python setup.py install
     ```
+
 * Now run `hello_world.py` by doing this:
+
     ```
     python hello_world.py
     ```
+
 * Last, deactivate your virtual environment by doing this:
+
     ```
     deactivate
     ```
+    
 * Sometime, C libraries doesn't created with intention to be accessed in Python. In this case you will need to write a wrapper.
   for those libraries. `python-opencv` is a python wrapper for `open-cv` library.
 
