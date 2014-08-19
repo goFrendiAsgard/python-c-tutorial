@@ -58,12 +58,11 @@ Based on the tutorialspoint's article, we already have make 3 files:
 * Sometime, C libraries doesn't created with intention to be accessed in Python. In this case you will need to write a wrapper.
   for those libraries. `python-opencv` is a python wrapper for `open-cv` library.
 
- Source codes
- ------------
+ Source Codes
+ -------------
 
  * hello.c
-
-    ```
+    ```c
     #include <Python.h>
 
     static PyObject* helloworld(PyObject* self)
@@ -88,16 +87,14 @@ Based on the tutorialspoint's article, we already have make 3 files:
     ```
 
 * setup.py
-
-    ```
+    ```python
     from distutils.core import setup, Extension
     setup(name='helloworld', version='1.0',  \
           ext_modules=[Extension('helloworld', ['hello.c'])])
     ```
 
 * hello_world.py
-
-    ```
+    ```python
     import helloworld
     print helloworld.helloworld()
     ```
