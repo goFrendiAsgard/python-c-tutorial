@@ -12,7 +12,7 @@ Why do you want to do this?
 Where is this example come from?
 --------------------------------
 
-From (http://www.tutorialspoint.com/python/python_further_extensions.htm)[http://www.tutorialspoint.com/python/python_further_extensions.htm]
+From [tutorialspoint](http://www.tutorialspoint.com/python/python_further_extensions.htm)
 
 Let's get started
 -----------------
@@ -20,8 +20,13 @@ Let's get started
 Based on the tutorialspoint's article, we already have make 3 files:
 ```
     |--- hello.c            (a `C` source code that use Python API)
-    |--- setup.py           (a typical Python module setup installation file to install `hello.c` as Python module)
-    |--- hello_world.py     (an example Python file that will use function declared in `hello.c`)
+    |
+    |--- setup.py           (a typical Python module setup installation file to 
+    |                        compile and install `hello.c` as Python module)
+    |
+    |--- hello_world.py     (an example Python file that will use function 
+    |                        declared in `hello.c`)
+    |
     |--- readme.md          (this file)
 ``` 
 
@@ -57,6 +62,7 @@ Based on the tutorialspoint's article, we already have make 3 files:
  ------------
 
  * hello.c
+
     ```
     #include <Python.h>
 
@@ -82,6 +88,7 @@ Based on the tutorialspoint's article, we already have make 3 files:
     ```
 
 * setup.py
+
     ```
     from distutils.core import setup, Extension
     setup(name='helloworld', version='1.0',  \
@@ -89,6 +96,7 @@ Based on the tutorialspoint's article, we already have make 3 files:
     ```
 
 * hello_world.py
+
     ```
     import helloworld
     print helloworld.helloworld()
