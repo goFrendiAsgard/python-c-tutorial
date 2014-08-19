@@ -30,7 +30,7 @@ Based on the tutorialspoint's article, we already have make 3 files:
     |--- readme.md          (this file)
 ``` 
 
-* First of all, I'm sure you don't want to ruin your entire system while trying to do this. 
+* First of all, I'm sure you don't want to ruin your entire system while trying to do this. That's why we need a virtual environment. 
   To make a virtual environment, you need to have virtualenv installed. To install virtualenv, do this:
     ```
     sudo pip install virtualenv
